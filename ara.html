@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Aku Minta Maaf 😢</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      
+    }
+    h1 {
+      color: #d10068;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 20px;
+      color: #333;
+      margin: 10px 20px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      background-color: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    button:hover {
+      background-color: #cc0052;
+    }
+    .gif {
+      margin-top: 20px;
+    }
+    .note {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #555;
+    }
+    
+    /* Partikel cinta */
+    .love {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall alternate infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lagu latar -->
+  <audio id="bgm" loop>
+    <source src="lagu1.mp3" type="audio/mp3">
+  </audio>
+
+  <button onclick="document.getElementById('bgm').play()">🎶 Putar Lagu Fix You</button>
+
+  <h1>Maafin Aku yahh sayangku yang cantikkkk 😔</h1>
+  <p>Aku tahu aku bikin kamu marah... dan aku bener-bener nyesel banget.</p>
+  <p>Aku nggak mau kehilangan kamu. Kamu itu yang paling penting buat aku, udahhh yahhh jangan diemin mass dekk 😢</p>
+
+  <div class="gif">
+    <img src="1.jpg" alt="untuk kamu" style="max-width: 90%; height: auto;">
+  </div>
+
+  <button onclick="alert('aaa sayangg bangett.... Makasih udah maafin aku 🥺❤️ Kamu yang terbaik muachhh')">Maafin Aku Sekarang</button>
+
+  <div class="note">
+    <p><strong>impian:</strong></p>
+    <p>Akuuu janjii aku bakal nikahin kamuuu berusaha sampe kamu nikah</p>
+    <p>akuu sayang kamuu</p>
+  </div>
+
+  <!-- Partikel cinta -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const love = document.createElement("div");
+      love.className = "love";
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.animationDuration = (3 + Math.random() * 5) + "s";
+      document.body.appendChild(love);
+    }
+  </script>
+
+</body>
+</html>
